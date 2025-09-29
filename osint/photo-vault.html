@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Vault - Encrypted & Secure Photo Storage</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico?v=2">
+    <link rel="shortcut icon" href="favicon.ico?v=2">
+    <link rel="apple-touch-icon" href="favicon.ico?v=2">
+    <link rel="stylesheet" href="privacy.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Roboto+Slab:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="privacy.html"><h2>Privacy</h2></a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="privacy.html#home">Home</a></li>
+                <li><a href="files.html">Files</a></li>
+                <li><a href="privacy.html#donate">Donate</a></li>
+                <li><a href="index.html">OSINT</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="tools-hero">
+            <div class="container">
+                <h1>Encrypted & Secure Photo Storage</h1>
+                <p>Secure your memories with encrypted photo storage. Our storage services utilize the latest encryption technology to keep your photos safe and secure. With us, your memories are always in the right hands.</p>
+                <a href="files.html" class="back-btn">← Back to Files</a>
+            </div>
+        </section>
+
+        <section class="tools-list-section">
+            <div class="container">
+                <div class="tools-list">
+                    <div class="tool-item">
+                        <div class="tool-header">
+                            <h3>PhotoPrism: AI-powered app for browsing, organizing & sharing your photos</h3>
+                            <div class="platforms">
+                                <span class="platform freeplan">Free Plan</span>
+                                <span class="platform selfhosted">Self-Hosted</span>
+                                <span class="platform bitcoin">Bitcoin</span>
+                                <span class="platform no">No</span>
+                            </div>
+                        </div>
+                        <p>hosted solution available yet, but coming soon. Tag and find pictures automatically. Try the demo.</p>
+                        <button onclick="showToolPopup('PhotoPrism', 'AI-powered app for browsing, organizing and sharing your photos. No hosted solution available yet, but coming soon. Tag and find pictures automatically.', 'https://photoprism.app/')" class="tool-link">View Details</button>
+                    </div>
+
+                    <div class="tool-item">
+                        <div class="tool-header">
+                            <h3>Cryptee: Encrypted Secure Photo Storage</h3>
+                            <div class="platforms">
+                                <span class="platform">Encrypted</span>
+                                <span class="platform freemium">Freemium</span>
+                                <span class="platform hosted">Hosted</span>
+                                <span class="platform bitcoin">Bitcoin</span>
+                                <span class="platform">Android</span>
+                                <span class="platform">iOS</span>
+                            </div>
+                        </div>
+                        <p>Your photos are encrypted before they leave your device, so Cryptee can't see your photos, and no one else. Use the code "privacytools" at the checkout for a 10% lifetime off.</p>
+                        <button onclick="showToolPopup('Cryptee', 'Your photos are encrypted before they leave your device, so Cryptee cannot see your photos, and no one else. Use the code privacytools at the checkout for a 10% lifetime off.', 'https://crypt.ee/')" class="tool-link">View Details</button>
+                    </div>
+
+                    <div class="tool-item">
+                        <div class="tool-header">
+                            <h3>ente: simple, encrypted photo storage</h3>
+                            <div class="platforms">
+                                <span class="platform">Encrypted</span>
+                                <span class="platform freemium">Freemium</span>
+                                <span class="platform hosted">Hosted</span>
+                                <span class="platform">Android</span>
+                                <span class="platform">iOS</span>
+                                <span class="platform bitcoin">Bitcoin</span>
+                            </div>
+                        </div>
+                        <p>Your photos are encrypted and hosted in datacenters in The Netherlands and France (Source). Migration options available: Local HDD, Google, Apple and Amazon Photos. Free trial of 1 GB for 365 days available. Use coupon code "PRIVACYTOOLS" to get 10% off in the first year.</p>
+                        <button onclick="showToolPopup('ente', 'Your photos are encrypted and hosted in datacenters in The Netherlands and France. Migration options available: Local HDD, Google, Apple and Amazon Photos. Free trial of 1 GB for 365 days available. Use coupon code PRIVACYTOOLS to get 10% off in the first year.', 'https://ente.io/')" class="tool-link">View Details</button>
+                    </div>
+
+                    <div class="tool-item">
+                        <div class="tool-header">
+                            <h3>Piwigo: Photo management software for the web</h3>
+                            <div class="platforms">
+                                <span class="platform freeplan">Free Plan</span>
+                                <span class="platform paidplan">Paid Plan</span>
+                                <span class="platform hosted">Hosted</span>
+                                <span class="platform selfhosted">Self-Hosted</span>
+                                <span class="platform">Android</span>
+                                <span class="platform">iOS</span>
+                                <span class="platform bitcoin">Bitcoin</span>
+                            </div>
+                        </div>
+                        <p>Cloud-hosted and self-hosted versions available. Comes with user management. Demo.</p>
+                        <button onclick="showToolPopup('Piwigo', 'Cloud-hosted and self-hosted versions available. Comes with user management. Demo.', 'https://piwigo.org/')" class="tool-link">View Details</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Privacy Tools - Photo Vault Suite</p>
+        </div>
+    </footer>
+
+    <div class="page-transition" id="pageTransition">
+        <div class="transition-content">
+            <div class="transition-logo">PHOTOS</div>
+            <div class="transition-loader"></div>
+        </div>
+    </div>
+
+    <div class="tool-popup" id="toolPopup">
+        <div class="popup-content">
+            <button class="popup-close" onclick="closeToolPopup()">&times;</button>
+            <h3 id="popupTitle">Tool Name</h3>
+            <p id="popupDescription">Tool description will appear here.</p>
+            <div class="redirect-notice">
+                <p>You will be redirected to the creator's official website</p>
+            </div>
+            <div class="popup-buttons">
+                <a href="#" target="_blank" class="popup-btn primary" id="popupVisitBtn">Visit Website</a>
+                <button onclick="closeToolPopup()" class="popup-btn secondary">Close</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="privacy.js"></script>
+</body>
+</html>

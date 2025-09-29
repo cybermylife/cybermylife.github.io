@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Maps - Privacy-focused Mapping Services</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico?v=2">
+    <link rel="shortcut icon" href="favicon.ico?v=2">
+    <link rel="apple-touch-icon" href="favicon.ico?v=2">
+    <link rel="stylesheet" href="privacy.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Roboto+Slab:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="privacy.html"><h2>Privacy</h2></a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="privacy.html#home">Home</a></li>
+                <li><a href="web-apps.html">Web & Apps</a></li>
+                <li><a href="privacy.html#donate">Donate</a></li>
+                <li><a href="index.html">OSINT</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="tools-hero">
+            <div class="container">
+                <h1>World Maps</h1>
+                <p>Privacy-focused mapping services that don't track your location or movements</p>
+                <a href="web-apps.html" class="back-btn">← Back to Web & Apps</a>
+            </div>
+        </section>
+
+        <section class="tools-list-section">
+            <div class="container">
+                <div class="tools-list">
+                    <div class="tool-item">
+                        <div class="tool-header">
+                            <h3>Organic Maps: Offline hike, bike, trails and navigation</h3>
+                            <div class="platforms">
+                                <span class="platform">Android</span>
+                                <span class="platform">iOS</span>
+                                <span class="platform">Huawei AppGallery</span>
+                            </div>
+                        </div>
+                        <p>Organic Maps is an Android & iOS offline maps app for travelers, tourists, hikers, and cyclists based on top of crowd-sourced OpenStreetMap data and curated with love by MapsWithMe (Maps.Me) founders.</p>
+                        <button onclick="showToolPopup('Organic Maps', 'Organic Maps is an Android & iOS offline maps app for travelers, tourists, hikers, and cyclists based on top of crowd-sourced OpenStreetMap data and curated with love by MapsWithMe (Maps.Me) founders.', 'https://organicmaps.app/')" class="tool-link">View Details</button>
+                    </div>
+
+                    <div class="tool-item">
+                        <div class="tool-header">
+                            <h3>OpenStreetMap: Free, collaborative world wide map</h3>
+                            <div class="platforms">
+                                <span class="platform bitcoin">Bitcoin</span>
+                            </div>
+                        </div>
+                        <p>OpenStreetMap is a map of the world, created by people like you and free to use under an open licence.</p>
+                        <button onclick="showToolPopup('OpenStreetMap', 'OpenStreetMap is a map of the world, created by people like you and free to use under an open licence.', 'https://www.openstreetmap.org/')" class="tool-link">View Details</button>
+                    </div>
+
+                    <div class="tool-item">
+                        <div class="tool-header">
+                            <h3>OsmAnd: Map and navigation app that uses OpenStreetMap data</h3>
+                            <div class="platforms">
+                                <span class="platform">Android</span>
+                                <span class="platform">iOS</span>
+                                <span class="platform">Amazon</span>
+                            </div>
+                        </div>
+                        <p>Global mobile map viewing and navigation for online and offline OpenStreetMap.</p>
+                        <button onclick="showToolPopup('OsmAnd', 'Global mobile map viewing and navigation for online and offline OpenStreetMap.', 'https://osmand.net/')" class="tool-link">View Details</button>
+                    </div>
+                </div>
+
+                <div class="tools-info">
+                    <h3>The Best Privacy-Friendly World Maps</h3>
+                    <p>Discover privacy-focused world maps that allow you to explore the world without being tracked. Protect your online privacy and security while browsing the web.</p>
+                    
+                    <p>What better way to enjoy and share maps with your friends or family than using anonymous geolocation? These privacy-friendly world maps are available on the internet, and you can use them for free. They are geotagged, anonymous, and privacy-friendly.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Privacy Tools - World Maps Suite</p>
+        </div>
+    </footer>
+
+    <div class="page-transition" id="pageTransition">
+        <div class="transition-content">
+            <div class="transition-logo">MAPS</div>
+            <div class="transition-loader"></div>
+        </div>
+    </div>
+
+    <div class="tool-popup" id="toolPopup">
+        <div class="popup-content">
+            <button class="popup-close" onclick="closeToolPopup()">&times;</button>
+            <h3 id="popupTitle">Tool Name</h3>
+            <p id="popupDescription">Tool description will appear here.</p>
+            <div class="redirect-notice">
+                <p>You will be redirected to the creator's official website</p>
+            </div>
+            <div class="popup-buttons">
+                <a href="#" target="_blank" class="popup-btn primary" id="popupVisitBtn">Visit Website</a>
+                <button onclick="closeToolPopup()" class="popup-btn secondary">Close</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="privacy.js"></script>
+</body>
+</html>

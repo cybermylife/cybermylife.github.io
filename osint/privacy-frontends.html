@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Frontends - Alternative Service Interfaces</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico?v=2">
+    <link rel="shortcut icon" href="favicon.ico?v=2">
+    <link rel="apple-touch-icon" href="favicon.ico?v=2">
+    <link rel="stylesheet" href="privacy.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Roboto+Slab:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="privacy.html"><h2>Privacy</h2></a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="privacy.html#home">Home</a></li>
+                <li><a href="web-apps.html">Web & Apps</a></li>
+                <li><a href="privacy.html#donate">Donate</a></li>
+                <li><a href="index.html">OSINT</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="tools-hero">
+            <div class="container">
+                <h1>Privacy Frontends</h1>
+                <p>Alternative service interfaces that protect your privacy while accessing popular platforms</p>
+                <a href="web-apps.html" class="back-btn">← Back to Web & Apps</a>
+            </div>
+        </section>
+
+        <section class="tools-list-section">
+            <div class="container">
+                <div class="tools-list">
+                    <div class="tool-item">
+                        <div class="tool-header">
+                            <h3>LibRedirect: Browser addon that redirects popular websites to alternatives</h3>
+                            <div class="platforms">
+                                <span class="platform">Firefox</span>
+                                <span class="platform">Chrome</span>
+                                <span class="platform bitcoin">Bitcoin</span>
+                            </div>
+                        </div>
+                        <p>Automatically redirects requests from popular websites to alternative and privacy friendly frontends. Uses random instances by default. You can modify this and add custom instances too. Supports: YouTube, YouTube Music, Twitter, Instagram, TikTok, reddit, imgur, Wikipedia, Medium, Quora, IMDb, PeerTube, LBRY/Odysee, Search, Translate, Maps and Send Files.</p>
+                        <button onclick="showToolPopup('LibRedirect', 'Automatically redirects requests from popular websites to alternative and privacy friendly frontends. Uses random instances by default. You can modify this and add custom instances too. Supports: YouTube, YouTube Music, Twitter, Instagram, TikTok, reddit, imgur, Wikipedia, Medium, Quora, IMDb, PeerTube, LBRY/Odysee, Search, Translate, Maps and Send Files.', 'https://libredirect.github.io/')" class="tool-link">View Details</button>
+                    </div>
+
+                    <div class="tool-item">
+                        <div class="tool-header">
+                            <h3>Invidious: Alternative frontend without ads and tracking for YouTube</h3>
+                            <div class="platforms">
+                                <span class="platform bitcoin">Bitcoin</span>
+                                <span class="platform">Win</span>
+                                <span class="platform">Mac</span>
+                                <span class="platform">Linux</span>
+                                <span class="platform">Android</span>
+                                <span class="platform">iOS</span>
+                                <span class="platform">Apple TV</span>
+                                <span class="platform">Phones</span>
+                                <span class="platform">Tablets</span>
+                                <span class="platform tor">Tor</span>
+                            </div>
+                        </div>
+                        <p>Alternative frontend without ads and tracking for YouTube. All requests go through the backend, client never talks to YouTube directly.</p>
+                        <button onclick="showToolPopup('Invidious', 'Alternative frontend without ads and tracking for YouTube. All requests go through the backend, client never talks to YouTube directly.', 'https://redirect.invidious.io/')" class="tool-link">View Details</button>
+                    </div>
+
+                    <div class="tool-item">
+                        <div class="tool-header">
+                            <h3>Nitter: Ad free, focused on privacy and performance for Twitter</h3>
+                            <div class="platforms">
+                                <span class="platform bitcoin">Bitcoin</span>
+                                <span class="platform tor">Tor</span>
+                                <span class="platform">I2P</span>
+                                <span class="platform">Lokinet</span>
+                            </div>
+                        </div>
+                        <p>Ad free, focused on privacy and performance for Twitter. All requests go through the backend, client never talks to Twitter. Android: Fritter - A privacy-friendly Twitter frontend for Android devices.</p>
+                        <button onclick="showToolPopup('Nitter', 'Ad free, focused on privacy and performance for Twitter. All requests go through the backend, client never talks to Twitter. Android: Fritter - A privacy-friendly Twitter frontend for Android devices.', 'https://nitter.net/')" class="tool-link">View Details</button>
+                    </div>
+
+                    <div class="tool-item">
+                        <div class="tool-header">
+                            <h3>ProxiTok: Privacy respecting frontend for TikTok</h3>
+                            <div class="platforms">
+                                <span class="platform bitcoin">Bitcoin</span>
+                                <span class="platform tor">Tor</span>
+                            </div>
+                        </div>
+                        <p>Privacy respecting frontend for TikTok. RSS Feed for user, trending and tag. Just add /rss to the URL.</p>
+                        <button onclick="showToolPopup('ProxiTok', 'Privacy respecting frontend for TikTok. RSS Feed for user, trending and tag. Just add /rss to the URL.', 'https://proxitok.herokuapp.com/')" class="tool-link">View Details</button>
+                    </div>
+
+                    <div class="tool-item">
+                        <div class="tool-header">
+                            <h3>rimgo: Lightweight, no ads or tracking and bandwith efficient for imgur</h3>
+                            <div class="platforms">
+                                <span class="platform bitcoin">Bitcoin</span>
+                            </div>
+                        </div>
+                        <p>Lightweight, no ads or tracking and bandwith efficient for imgur. No sign up or app install prompts.</p>
+                        <button onclick="showToolPopup('rimgo', 'Lightweight, no ads or tracking and bandwith efficient for imgur. No sign up or app install prompts.', 'https://i.bcow.xyz/')" class="tool-link">View Details</button>
+                    </div>
+
+                    <div class="tool-item">
+                        <div class="tool-header">
+                            <h3>Wikiless: No JavaScript or ads for Wikipedia</h3>
+                            <div class="platforms">
+                                <span class="platform bitcoin">Bitcoin</span>
+                            </div>
+                        </div>
+                        <p>No JavaScript or ads for Wikipedia. This instance is securely hosted by Privex.io for PrivacyTools.io. All requests go through the backend, client never talks to Wikipedia.</p>
+                        <button onclick="showToolPopup('Wikiless', 'No JavaScript or ads for Wikipedia. This instance is securely hosted by Privex.io for PrivacyTools.io. All requests go through the backend, client never talks to Wikipedia.', 'https://wiki.privacytools.io/')" class="tool-link">View Details</button>
+                    </div>
+
+                    <div class="tool-item">
+                        <div class="tool-header">
+                            <h3>Scribe: Alternative Frontend for Medium</h3>
+                            <div class="platforms">
+                                <span class="platform bitcoin">Bitcoin</span>
+                                <span class="platform tor">Tor</span>
+                            </div>
+                        </div>
+                        <p>Alternative Frontend for Medium with clean interface and no tracking.</p>
+                        <button onclick="showToolPopup('Scribe', 'Alternative Frontend for Medium with clean interface and no tracking.', 'https://scribe.rip/')" class="tool-link">View Details</button>
+                    </div>
+
+                    <div class="tool-item">
+                        <div class="tool-header">
+                            <h3>Quetre: A libre front-end for Quora</h3>
+                            <div class="platforms">
+                                <span class="platform bitcoin">Bitcoin</span>
+                                <span class="platform tor">Tor</span>
+                            </div>
+                        </div>
+                        <p>A libre front-end for Quora. All requests are proxied. Dark and light themes available.</p>
+                        <button onclick="showToolPopup('Quetre', 'A libre front-end for Quora. All requests are proxied. Dark and light themes available.', 'https://quetre.herokuapp.com/')" class="tool-link">View Details</button>
+                    </div>
+
+                    <div class="tool-item">
+                        <div class="tool-header">
+                            <h3>libremdb: Clean and lightweight interface for IMDb</h3>
+                            <div class="platforms">
+                                <span class="platform bitcoin">Bitcoin</span>
+                                <span class="platform tor">Tor</span>
+                            </div>
+                        </div>
+                        <p>Clean and lightweight interface for IMDb. All requests go through the backend; client never talks to IMDb.</p>
+                        <button onclick="showToolPopup('libremdb', 'Clean and lightweight interface for IMDb. All requests go through the backend; client never talks to IMDb.', 'https://libremdb.herokuapp.com/')" class="tool-link">View Details</button>
+                    </div>
+                </div>
+
+                <div class="tools-info">
+                    <h3>Alternative & Privacy Friendly Frontends for Social Media</h3>
+                    <p>Are you looking for a more private, ad-free and user friendly social media experience? Explore our collection of alternative frontends for major social networks. All software is free & open source, and most come with no ads or tracking.</p>
+                    
+                    <p><strong>Privacy Frontends collaboration with Privex.io:</strong> For popular services such as Twitter, reddit, imgur, and Wikipedia - with Tor hidden services available, allowing you to improve your privacy when using these services.</p>
+                    
+                    <p>These tools and services offer alternative privacy friendly frontends and backends for popular social media & networking websites. The original websites usually track their users and serve intrusive ads, with these alternative frontends the privacy conscious can opt-out out of tracking and enjoy supported websites in a much cleaner version.</p>
+                    
+                    <p>Privacy tools listed on this page are all <strong>open-source</strong>.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Privacy Tools - Privacy Frontends Suite</p>
+        </div>
+    </footer>
+
+    <div class="page-transition" id="pageTransition">
+        <div class="transition-content">
+            <div class="transition-logo">FRONTENDS</div>
+            <div class="transition-loader"></div>
+        </div>
+    </div>
+
+    <div class="tool-popup" id="toolPopup">
+        <div class="popup-content">
+            <button class="popup-close" onclick="closeToolPopup()">&times;</button>
+            <h3 id="popupTitle">Tool Name</h3>
+            <p id="popupDescription">Tool description will appear here.</p>
+            <div class="redirect-notice">
+                <p>You will be redirected to the creator's official website</p>
+            </div>
+            <div class="popup-buttons">
+                <a href="#" target="_blank" class="popup-btn primary" id="popupVisitBtn">Visit Website</a>
+                <button onclick="closeToolPopup()" class="popup-btn secondary">Close</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="privacy.js"></script>
+</body>
+</html>
