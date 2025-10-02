@@ -76,18 +76,46 @@ function setupVolumeControl() {
     const volumeValue = document.getElementById('volumeValue');
     const volumeIcon = document.getElementById('volumeIcon');
     const backgroundMusic = document.getElementById('backgroundMusic');
+    const volumeControl = document.querySelector('.volume-control');
     
+    // Enhanced volume control with visual feedback
     volumeSlider.addEventListener('input', function() {
         const volume = this.value / 100;
         backgroundMusic.volume = volume;
         volumeValue.textContent = this.value + '%';
         
+        // Add visual feedback to the control
+        if (volumeControl) {
+            volumeControl.style.transform = `scale(${1 + volume * 0.1})`;
+            volumeControl.style.boxShadow = `
+                0 8px 32px rgba(0, 0, 0, 0.12),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1),
+                0 0 ${20 + volume * 30}px rgba(74, 144, 226, ${0.2 + volume * 0.3})
+            `;
+        }
+        
+        // Update icon based on volume level
         if (volume === 0) {
             volumeIcon.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/></svg>';
-        } else if (volume < 0.5) {
+        } else if (volume < 0.3) {
+            volumeIcon.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3z"/></svg>';
+        } else if (volume < 0.7) {
             volumeIcon.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/></svg>';
         } else {
             volumeIcon.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>';
+        }
+    });
+    
+    // Add click to mute/unmute functionality
+    volumeIcon.addEventListener('click', function() {
+        if (backgroundMusic.volume > 0) {
+            backgroundMusic.volume = 0;
+            volumeSlider.value = 0;
+            volumeValue.textContent = '0%';
+        } else {
+            backgroundMusic.volume = 0.5;
+            volumeSlider.value = 50;
+            volumeValue.textContent = '50%';
         }
     });
     
@@ -115,7 +143,9 @@ function getDateString() {
 }
 
 function updateViewCounter() {
-    document.getElementById('viewCount').textContent = currentViews.toLocaleString();
+    const el = document.getElementById('viewCount');
+    if (!el) return;
+    el.textContent = currentViews.toLocaleString();
 }
 
 function loadViews() {
@@ -222,95 +252,90 @@ function hideLoadingScreen() {
     }, 2000);
 }
 
-function enterSite() {
+function enterSite(withMusic = true) {
     const touchScreen = document.getElementById('touchScreen');
     const backgroundMusic = document.getElementById('backgroundMusic');
+    const volumeControl = document.querySelector('.volume-control');
+    
+    // Store music preference
+    localStorage.setItem('musicEnabled', withMusic.toString());
     
     touchScreen.classList.add('hidden');
     
     setTimeout(() => {
         touchScreen.style.display = 'none';
         
-        if (backgroundMusic.src) {
-            backgroundMusic.play().then(() => {
-                console.log('Music started after touch');
-            }).catch((error) => {
-                console.log('Music still blocked:', error);
-            });
+        // Show or hide volume control based on music choice
+        if (withMusic) {
+            if (volumeControl) {
+                volumeControl.style.display = 'flex';
+            }
+            if (backgroundMusic.src) {
+                backgroundMusic.play().then(() => {
+                    console.log('Music started after touch');
+                }).catch((error) => {
+                    console.log('Music still blocked:', error);
+                });
+            }
+        } else {
+            if (volumeControl) {
+                volumeControl.style.display = 'none';
+            }
         }
     }, 500);
 }
 
 function createHackerParticles() {
     const particlesContainer = document.getElementById('hackerParticles');
-    const particleCount = 50;
+    const particleCount = 120;
     
     for (let i = 0; i < particleCount; i++) {
         const particle = document.createElement('div');
         particle.className = 'particle';
         particle.style.left = Math.random() * 100 + '%';
-        particle.style.animationDelay = Math.random() * 8 + 's';
-        particle.style.animationDuration = (Math.random() * 8 + 6) + 's';
+        particle.style.animationDelay = Math.random() * 15 + 's';
+        particle.style.animationDuration = (Math.random() * 12 + 10) + 's';
+        particle.style.transform = `scale(${Math.random() * 1.2 + 0.3})`;
+        
+        // Add random rotation and blur for more organic movement
+        particle.style.filter = `blur(${Math.random() * 0.5}px)`;
+        particle.style.borderRadius = Math.random() > 0.7 ? '50%' : '0%';
+        
+        // Add some particles with different shapes
+        if (Math.random() > 0.8) {
+            particle.style.borderRadius = '0%';
+            particle.style.transform += ` rotate(${Math.random() * 360}deg)`;
+        }
+        
         particlesContainer.appendChild(particle);
     }
 }
 
-function setupCustomCursor() {
-    const cursor = document.getElementById('customCursor');
-    const ring = document.getElementById('customCursorRing');
-    
-    let cursorX = 0, cursorY = 0;
-    let targetX = 0, targetY = 0;
-    let rafActive = false;
-
-    function animateCursor() {
-        const dx = targetX - cursorX;
-        const dy = targetY - cursorY;
-        cursorX += dx * 0.2;
-        cursorY += dy * 0.2;
-        cursor.style.transform = `translate3d(${cursorX - 9}px, ${cursorY - 9}px, 0)`;
-        ring.style.transform = `translate3d(${cursorX - 18}px, ${cursorY - 18}px, 0)`;
-        rafActive = true;
-        requestAnimationFrame(animateCursor);
-    }
-
-    document.addEventListener('mousemove', function(e) {
-        targetX = e.clientX;
-        targetY = e.clientY;
-        if (!rafActive) animateCursor();
-    });
-    
-    document.addEventListener('mouseenter', function() {
-        cursor.style.opacity = '1';
-    });
-    
-    document.addEventListener('mouseleave', function() {
-        cursor.style.opacity = '0';
-    });
-    
-    const hoverElements = document.querySelectorAll('a, button, input, textarea, select, .social-link, .nav-link');
-    hoverElements.forEach(element => {
-        element.addEventListener('mouseenter', function() {
-            cursor.classList.add('hover');
-            ring.classList.add('hover');
-        });
-        
-        element.addEventListener('mouseleave', function() {
-            cursor.classList.remove('hover');
-            ring.classList.remove('hover');
-        });
-    });
-}
+function setupCustomCursor() { }
 
 document.addEventListener('DOMContentLoaded', function() {
     detectLogo();
     detectMusic();
     setupVolumeControl();
-    loadViews();
-    incrementView();
+    if (document.getElementById('viewCount')) {
+        loadViews();
+        incrementView();
+    }
     hideLoadingScreen();
     createHackerParticles();
-    setupCustomCursor();
+    
+    // Check music preference and show/hide volume control accordingly
+    const musicEnabled = localStorage.getItem('musicEnabled');
+    const volumeControl = document.querySelector('.volume-control');
+    if (musicEnabled === 'false') {
+        if (volumeControl) {
+            volumeControl.style.display = 'none';
+        }
+    } else if (musicEnabled === 'true') {
+        if (volumeControl) {
+            volumeControl.style.display = 'flex';
+        }
+    }
     
     window.addEventListener('click', function(event) {
         const modal = document.getElementById('contactModal');
@@ -327,7 +352,8 @@ document.addEventListener('DOMContentLoaded', function() {
     
     document.addEventListener('click', function() {
         const backgroundMusic = document.getElementById('backgroundMusic');
-        if (backgroundMusic.paused && backgroundMusic.src) {
+        const musicEnabled = localStorage.getItem('musicEnabled');
+        if (musicEnabled !== 'false' && backgroundMusic.paused && backgroundMusic.src) {
             backgroundMusic.play().catch(() => {
                 console.log('Music autoplay blocked by browser');
             });
@@ -336,7 +362,8 @@ document.addEventListener('DOMContentLoaded', function() {
     
     document.addEventListener('touchstart', function() {
         const backgroundMusic = document.getElementById('backgroundMusic');
-        if (backgroundMusic.paused && backgroundMusic.src) {
+        const musicEnabled = localStorage.getItem('musicEnabled');
+        if (musicEnabled !== 'false' && backgroundMusic.paused && backgroundMusic.src) {
             backgroundMusic.play().catch(() => {
                 console.log('Music autoplay blocked by browser');
             });
