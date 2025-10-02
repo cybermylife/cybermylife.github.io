@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P2P Manager - Open Source Torrent Clients without Ads and Tracking</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico?v=2">
+    <link rel="shortcut icon" href="favicon.ico?v=2">
+    <link rel="apple-touch-icon" href="favicon.ico?v=2">
+    <link rel="stylesheet" href="privacy.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Roboto+Slab:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="privacy.html"><h2>Privacy</h2></a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="privacy.html#home">Home</a></li>
+                <li><a href="files.html">Files</a></li>
+                <li><a href="privacy.html#donate">Donate</a></li>
+                <li><a href="index.html">OSINT</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="tools-hero">
+            <div class="container">
+                <h1>Open Source Torrent Clients without Ads and Tracking</h1>
+                <p>Stay secure and anonymous while downloading files with our list of recommended open-source torrent clients. Download safely and protect your privacy with myosintse.github.io</p>
+                <a href="files.html" class="back-btn">← Back to Files</a>
+            </div>
+        </section>
+
+        <section class="tools-list-section">
+            <div class="container">
+                <div class="warning-box">
+                    <h3>Important Security Notice</h3>
+                    <p>Your IP address is exposed while using any Torrent Client. Consider using a VPN provider to hide your IP. If you are using µTorrent that includes ads and tracking, select your alternative here.</p>
+                </div>
+
+                <div class="tools-list">
+                    <div class="tool-item">
+                        <div class="tool-header">
+                            <h3>WebTorrent: Stream torrents in browsers and on desktop</h3>
+                            <div class="platforms">
+                                <span class="platform">Win</span>
+                                <span class="platform">Mac</span>
+                                <span class="platform">Linux</span>
+                            </div>
+                        </div>
+                        <p>Stream torrents in browsers and on desktop</p>
+                        <button onclick="showToolPopup('WebTorrent', 'Stream torrents in browsers and on desktop', 'https://webtorrent.io/')" class="tool-link">View Details</button>
+                    </div>
+
+                    <div class="tool-item">
+                        <div class="tool-header">
+                            <h3>Deluge: Lightweight with WebUI</h3>
+                            <div class="platforms">
+                                <span class="platform">Win</span>
+                                <span class="platform">Mac</span>
+                                <span class="platform">Linux</span>
+                            </div>
+                        </div>
+                        <p>Lightweight with WebUI</p>
+                        <button onclick="showToolPopup('Deluge', 'Lightweight with WebUI', 'https://deluge-torrent.org/')" class="tool-link">View Details</button>
+                    </div>
+
+                    <div class="tool-item">
+                        <div class="tool-header">
+                            <h3>qBittorrent: µTorrent-like User Interface</h3>
+                            <div class="platforms">
+                                <span class="platform">Win</span>
+                                <span class="platform">Mac</span>
+                                <span class="platform">Linux</span>
+                            </div>
+                        </div>
+                        <p>Polished µTorrent-like User Interface.</p>
+                        <button onclick="showToolPopup('qBittorrent', 'Polished µTorrent-like User Interface.', 'https://www.qbittorrent.org/')" class="tool-link">View Details</button>
+                    </div>
+
+                    <div class="tool-item">
+                        <div class="tool-header">
+                            <h3>BiglyBT: Feature rich and remote control via Android app</h3>
+                            <div class="platforms">
+                                <span class="platform">Win</span>
+                                <span class="platform">Android</span>
+                                <span class="platform">Mac</span>
+                                <span class="platform">Linux</span>
+                            </div>
+                        </div>
+                        <p>Feature rich and remote control via Android app</p>
+                        <button onclick="showToolPopup('BiglyBT', 'Feature rich and remote control via Android app', 'https://www.biglybt.com/')" class="tool-link">View Details</button>
+                    </div>
+
+                    <div class="tool-item">
+                        <div class="tool-header">
+                            <h3>Transmission: Small footprint with minimal user interface</h3>
+                            <div class="platforms">
+                                <span class="platform">Win</span>
+                                <span class="platform">Mac</span>
+                                <span class="platform">Linux</span>
+                            </div>
+                        </div>
+                        <p>Small footprint with minimal user interface</p>
+                        <button onclick="showToolPopup('Transmission', 'Small footprint with minimal user interface', 'https://transmissionbt.com/')" class="tool-link">View Details</button>
+                    </div>
+                </div>
+
+                <div class="tools-info">
+                    <p>Torrent is a legitimate file-sharing protocol used in downloading large files from the internet. While it is legit, you might find some unsafe sites with lots of ads and tracking. These security and privacy tools enable you to download torrent files without tracking or ads.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Privacy Tools - P2P Manager Suite</p>
+        </div>
+    </footer>
+
+    <div class="page-transition" id="pageTransition">
+        <div class="transition-content">
+            <div class="transition-logo">P2P</div>
+            <div class="transition-loader"></div>
+        </div>
+    </div>
+
+    <div class="tool-popup" id="toolPopup">
+        <div class="popup-content">
+            <button class="popup-close" onclick="closeToolPopup()">&times;</button>
+            <h3 id="popupTitle">Tool Name</h3>
+            <p id="popupDescription">Tool description will appear here.</p>
+            <div class="redirect-notice">
+                <p>You will be redirected to the creator's official website</p>
+            </div>
+            <div class="popup-buttons">
+                <a href="#" target="_blank" class="popup-btn primary" id="popupVisitBtn">Visit Website</a>
+                <button onclick="closeToolPopup()" class="popup-btn secondary">Close</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="privacy.js"></script>
+</body>
+</html>

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Essential Privacy Essentials - Privacy Hub</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico?v=2">
+    <link rel="shortcut icon" href="favicon.ico?v=2">
+    <link rel="apple-touch-icon" href="favicon.ico?v=2">
+    <link rel="stylesheet" href="privacy.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="privacy.html"><h2>Privacy</h2></a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="privacy.html#home">Home</a></li>
+                <li><a href="privacy.html#stage">Catalog</a></li>
+                <li><a href="privacy.html#donate">Donate</a></li>
+                <li><a href="index.html">OSINT</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="essentials-hero">
+            <div class="container">
+                <h1>Essential Privacy Essentials</h1>
+                <p>Build a resilient privacy stack across every layer of your digital life.</p>
+                <a href="privacy.html#stage" class="back-btn">← Back to Catalog</a>
+            </div>
+        </section>
+
+        <section class="essentials-section">
+            <div class="container">
+                <div class="essentials-intro">
+                    <h2>Your Core Privacy Toolkit</h2>
+                    <p>Select a category to explore curated recommendations, trusted providers, and actionable guides tailored for privacy-first users.</p>
+                </div>
+                <div class="essentials-collection">
+                    <div class="files-grid">
+                        <a href="privacy-vpn.html" class="file-card essential-tile" data-essential="vpn" id="vpn-suite">
+                            <div class="card-icon">VPN</div>
+                            <h3>Best VPN for Privacy</h3>
+                            <p>Harden your network perimeter with audited, log-free connections.</p>
+                        </a>
+                        <a href="#browser-suite" class="file-card essential-tile" data-essential="browser" id="browser-btn">
+                            <div class="card-icon">PB</div>
+                            <h3>Private Browser</h3>
+                            <p>Navigate the web with hardened browsers and privacy extensions.</p>
+                        </a>
+                        <a href="#email-suite" class="file-card essential-tile" data-essential="email" id="email-btn">
+                            <div class="card-icon">PE</div>
+                            <h3>Privacy Email</h3>
+                            <p>Secure communications with encrypted, surveillance-free inboxes.</p>
+                        </a>
+                        <a href="#password-suite" class="file-card essential-tile" data-essential="password" id="password-btn">
+                            <div class="card-icon">PM</div>
+                            <h3>Password Manager</h3>
+                            <p>Strengthen credentials using zero-knowledge encrypted vaults.</p>
+                        </a>
+                        <a href="#storage-suite" class="file-card essential-tile" data-essential="storage" id="storage-btn">
+                            <div class="card-icon">CS</div>
+                            <h3>Cloud Storage</h3>
+                            <p>Synchronize files through end-to-end encrypted storage services.</p>
+                        </a>
+                        <a href="#crypto-suite" class="file-card essential-tile" data-essential="crypto" id="crypto-btn">
+                            <div class="card-icon">CC</div>
+                            <h3>Cryptocurrency</h3>
+                            <p>Transact anonymously with privacy-focused wallets and tools.</p>
+                        </a>
+                        <a href="#messaging-suite" class="file-card essential-tile" data-essential="messaging" id="messaging-btn">
+                            <div class="card-icon">IM</div>
+                            <h3>Instant Messaging</h3>
+                            <p>Exchange messages via secure, metadata-resistant platforms.</p>
+                        </a>
+                        <a href="#dns-suite" class="file-card essential-tile" data-essential="dns" id="dns-btn">
+                            <div class="card-icon">DNS</div>
+                            <h3>Encrypted DNS</h3>
+                            <p>Protect lookups using encrypted DNS resolvers and DoH services.</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="browser-suite" class="essential-detail">
+            <div class="detail-header">
+                <h3>Private Browser Stack</h3>
+                <p>Deploy hardened browsers with minimized telemetry, reproducible builds, and isolation profiles for daily browsing and high-risk research.</p>
+            </div>
+            <div class="provider-grid">
+                <article class="provider-card">
+                    <div class="provider-title">
+                        <h4><a href="https://mullvad.net/en/browser" target="_blank" rel="noopener noreferrer">Mullvad Browser</a></h4>
+                        <span class="provider-price">Tor Project & Mullvad collaboration</span>
+                    </div>
+                    <p class="provider-meta">Win Mac Linux Hardened</p>
+                    <p>Fingerprint-resistant profile tuned for VPN usage. Ships with Tor Browser privacy patches and isolates site activity per tab.</p>
+                </article>
+                <article class="provider-card">
+                    <div class="provider-title">
+                        <h4><a href="https://www.torproject.org/download/" target="_blank" rel="noopener noreferrer">Tor Browser</a></h4>
+                        <span class="provider-price">Free and open source</span>
+                    </div>
+                    <p class="provider-meta">Win Mac Linux Android Free</p>
+                    <p>Full Tor network integration with circuit isolation and first-party tracking protections. Essential for high-risk investigative work.</p>
+                </article>
+                <article class="provider-card">
+                    <div class="provider-title">
+                        <h4><a href="https://librewolf.net/" target="_blank" rel="noopener noreferrer">LibreWolf</a></h4>
+                        <span class="provider-price">Community maintained</span>
+                    </div>
+                    <p class="provider-meta">Win Mac Linux Hardened</p>
+                    <p>Firefox fork with telemetry removed, hardened defaults, and built-in content filters. Ideal daily driver for privacy-conscious users.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="email-suite" class="essential-detail">
+            <div class="detail-header">
+                <h3>Privacy Email Providers</h3>
+                <p>Adopt encrypted email platforms with zero-access storage, jurisdictional safety, and robust identity protections.</p>
+            </div>
+            <div class="provider-grid">
+                <article class="provider-card">
+                    <div class="provider-title">
+                        <h4><a href="https://proton.me/mail" target="_blank" rel="noopener noreferrer">Proton Mail</a></h4>
+                        <span class="provider-price">Free tier available</span>
+                    </div>
+                    <p class="provider-meta">Web Android iOS Open-Source</p>
+                    <p>Swiss-based provider offering end-to-end encryption, EasySwitch migration, and encrypted calendar contacts integration.</p>
+                </article>
+                <article class="provider-card">
+                    <div class="provider-title">
+                        <h4><a href="https://tuta.com/" target="_blank" rel="noopener noreferrer">Tuta</a></h4>
+                        <span class="provider-price">Solar powered infrastructure</span>
+                    </div>
+                    <p class="provider-meta">Web Android iOS Desktop Open-Source</p>
+                    <p>German service delivering post-quantum TLS, calendar encryption, and domain-level user management for teams.</p>
+                </article>
+                <article class="provider-card">
+                    <div class="provider-title">
+                        <h4><a href="https://riseup.net/en/email" target="_blank" rel="noopener noreferrer">Riseup</a></h4>
+                        <span class="provider-price">Activist collective</span>
+                    </div>
+                    <p class="provider-meta">Web IMAP VPN Collective</p>
+                    <p>Invitation-based service supporting activists with secure mail, lists, and VPN access. Strict no-commercial-data policies.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="password-suite" class="essential-detail">
+            <div class="detail-header">
+                <h3>Password Manager Toolkit</h3>
+                <p>Store credentials in audited vaults with strong cryptography, self-hosting options, and advanced breach monitoring.</p>
+            </div>
+            <div class="provider-grid">
+                <article class="provider-card">
+                    <div class="provider-title">
+                        <h4><a href="https://bitwarden.com/" target="_blank" rel="noopener noreferrer">Bitwarden</a></h4>
+                        <span class="provider-price">Open-source SaaS or self-hosted</span>
+                    </div>
+                    <p class="provider-meta">Win Mac Linux Browser Android iOS CLI</p>
+                    <p>End-to-end encrypted vault with password generator, breach reports, and configurable self-host deployment.</p>
+                </article>
+                <article class="provider-card">
+                    <div class="provider-title">
+                        <h4><a href="https://keepassxc.org/" target="_blank" rel="noopener noreferrer">KeePassXC</a></h4>
+                        <span class="provider-price">Local-first database</span>
+                    </div>
+                    <p class="provider-meta">Win Mac Linux Offline Portable</p>
+                    <p>Community fork of KeePass with cross-platform support, hardware key integration, and customizable database encryption.</p>
+                </article>
+                <article class="provider-card">
+                    <div class="provider-title">
+                        <h4><a href="https://1password.com/teams/" target="_blank" rel="noopener noreferrer">1Password</a></h4>
+                        <span class="provider-price">Family and team plans</span>
+                    </div>
+                    <p class="provider-meta">Win Mac Linux Browser Android iOS</p>
+                    <p>Uses dual-layer protection with Secret Key, travel mode vault hiding, and high-availability infrastructure for teams.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="storage-suite" class="essential-detail">
+            <div class="detail-header">
+                <h3>Encrypted Cloud Storage</h3>
+                <p>Sync documents through zero-knowledge storage providers with client-side encryption and resilient global nodes.</p>
+            </div>
+            <div class="provider-grid">
+                <article class="provider-card">
+                    <div class="provider-title">
+                        <h4><a href="https://proton.me/drive" target="_blank" rel="noopener noreferrer">Proton Drive</a></h4>
+                        <span class="provider-price">Integrated with Proton ecosystem</span>
+                    </div>
+                    <p class="provider-meta">Web Android iOS E2EE</p>
+                    <p>Swiss hosted, end-to-end encrypted drive with document sharing, offline access, and version management.</p>
+                </article>
+                <article class="provider-card">
+                    <div class="provider-title">
+                        <h4><a href="https://tresorit.com/" target="_blank" rel="noopener noreferrer">Tresorit</a></h4>
+                        <span class="provider-price">Enterprise-grade compliance</span>
+                    </div>
+                    <p class="provider-meta">Win Mac Linux Android iOS Zero-Knowledge</p>
+                    <p>End-to-end encrypted collaboration with granular permissions, activity history, and EU/US data residency options.</p>
+                </article>
+                <article class="provider-card">
+                    <div class="provider-title">
+                        <h4><a href="https://www.sync.com/" target="_blank" rel="noopener noreferrer">Sync.com</a></h4>
+                        <span class="provider-price">Strong family plans</span>
+                    </div>
+                    <p class="provider-meta">Win Mac Android iOS Zero-Knowledge</p>
+                    <p>Canadian provider with vault locking, password protected shares, and compliance-ready controls.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="crypto-suite" class="essential-detail">
+            <div class="detail-header">
+                <h3>Privacy Cryptocurrency Toolkit</h3>
+                <p>Handle digital assets with privacy-preserving wallets, coin control, and network-level anonymity safeguards.</p>
+            </div>
+            <div class="provider-grid">
+                <article class="provider-card">
+                    <div class="provider-title">
+                        <h4><a href="https://www.getmonero.org/" target="_blank" rel="noopener noreferrer">Monero</a></h4>
+                        <span class="provider-price">Ring CT default privacy</span>
+                    </div>
+                    <p class="provider-meta">Community ASIC-Resistant</p>
+                    <p>Adaptive block size, stealth addresses, and mandatory ring signatures keep transactions unlinkable by design.</p>
+                </article>
+                <article class="provider-card">
+                    <div class="provider-title">
+                        <h4><a href="https://samouraiwallet.com/" target="_blank" rel="noopener noreferrer">Samourai Wallet</a></h4>
+                        <span class="provider-price">Android privacy wallet</span>
+                    </div>
+                    <p class="provider-meta">Android Whirlpool PayNym</p>
+                    <p>Implements Whirlpool coin joins, Stonewall transactions, and remote mixing via Dojo servers for Bitcoin.</p>
+                </article>
+                <article class="provider-card">
+                    <div class="provider-title">
+                        <h4><a href="https://www.wasabiwallet.io/" target="_blank" rel="noopener noreferrer">Wasabi Wallet</a></h4>
+                        <span class="provider-price">Desktop coordinator</span>
+                    </div>
+                    <p class="provider-meta">Win Mac Linux Bitcoin</p>
+                    <p>Offers zkSNACKs coin join implementation, wallet labeling, and client-side block filtering for private Bitcoin usage.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="messaging-suite" class="essential-detail">
+            <div class="detail-header">
+                <h3>Secure Messaging Platforms</h3>
+                <p>Maintain confidential communications using messengers with audited protocols, metadata minimization, and multi-device support.</p>
+            </div>
+            <div class="provider-grid">
+                <article class="provider-card">
+                    <div class="provider-title">
+                        <h4><a href="https://signal.org/" target="_blank" rel="noopener noreferrer">Signal</a></h4>
+                        <span class="provider-price">Open-source foundation</span>
+                    </div>
+                    <p class="provider-meta">Android iOS Desktop E2EE</p>
+                    <p>Employs Signal Protocol, sealed sender, and disappearing messages with minimal metadata retention.</p>
+                </article>
+                <article class="provider-card">
+                    <div class="provider-title">
+                        <h4><a href="https://getsession.org/" target="_blank" rel="noopener noreferrer">Session</a></h4>
+                        <span class="provider-price">Monero-backed trustless network</span>
+                    </div>
+                    <p class="provider-meta">Android iOS Desktop Onion-Routed</p>
+                    <p>Metadata-free messenger using Oxen Service Node network with no phone number requirement.</p>
+                </article>
+                <article class="provider-card">
+                    <div class="provider-title">
+                        <h4><a href="https://threema.ch/en" target="_blank" rel="noopener noreferrer">Threema</a></h4>
+                        <span class="provider-price">Swiss one-time license</span>
+                    </div>
+                    <p class="provider-meta">Android iOS Desktop Audited</p>
+                    <p>Zero metadata policy, anonymous IDs, and open-source clients with reproducible builds.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="dns-suite" class="essential-detail">
+            <div class="detail-header">
+                <h3>Encrypted DNS Resolvers</h3>
+                <p>Guard DNS requests with resolvers supporting DNS-over-HTTPS, DNS-over-TLS, and advanced filtering controls.</p>
+            </div>
+            <div class="provider-grid">
+                <article class="provider-card">
+                    <div class="provider-title">
+                        <h4><a href="https://nextdns.io/" target="_blank" rel="noopener noreferrer">NextDNS</a></h4>
+                        <span class="provider-price">Customizable DoH/DoT</span>
+                    </div>
+                    <p class="provider-meta">DoH DoT Native Apps Logs-Optional</p>
+                    <p>Full analytics with configurable retention, blocklists, parental controls, and encrypted logs storage.</p>
+                </article>
+                <article class="provider-card">
+                    <div class="provider-title">
+                        <h4><a href="https://www.quad9.net/" target="_blank" rel="noopener noreferrer">Quad9</a></h4>
+                        <span class="provider-price">Non-profit foundation</span>
+                    </div>
+                    <p class="provider-meta">DoH DoT DNSSEC Anycast</p>
+                    <p>Anycast network offering malware blocking, European jurisdiction, and no IP logging policy.</p>
+                </article>
+                <article class="provider-card">
+                    <div class="provider-title">
+                        <h4><a href="https://mullvad.net/en/help/dns-over-https-and-dns-over-tls/" target="_blank" rel="noopener noreferrer">Mullvad DNS</a></h4>
+                        <span class="provider-price">Bundled with Mullvad</span>
+                    </div>
+                    <p class="provider-meta">DoH DoT Ad-Blocking</p>
+                    <p>Zero logging DNS with optional ad and tracker blocking, accessible via VPN or public DoH/DoT endpoints.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Privacy Tools - Essential Privacy Essentials</p>
+        </div>
+    </footer>
+
+    <div class="page-transition" id="pageTransition">
+        <div class="transition-content">
+            <div class="transition-logo">ESSENTIALS</div>
+            <div class="transition-loader"></div>
+        </div>
+    </div>
+
+    <script src="privacy.js"></script>
+</body>
+</html>
